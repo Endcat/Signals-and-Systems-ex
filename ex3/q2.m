@@ -1,0 +1,18 @@
+syms t;
+F = fourier(0.5 * exp(-2 * t) * heaviside(t));
+subplot(2, 2, 1);
+fplot(abs(F));
+grid on;
+subplot(2, 2, 2);
+F2 = angle(F) * 180 / pi;
+fplot(F2);
+grid on;
+syms t;
+F = fourier(0.5 * exp(-2 * (t - 1)) * heaviside(t-1));
+subplot(2, 2, 3);
+fplot(abs(F));
+grid on;
+subplot(2, 2, 4);
+F2 = angle(F) * 180 / pi;
+fplot(F2);
+grid on;
